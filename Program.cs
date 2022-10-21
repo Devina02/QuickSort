@@ -36,7 +36,7 @@ namespace QuickSort
             for (int i = 0; i < n; i++)
             {
 
-                Console.Write("<" + (i + i) + ">");
+                Console.Write("<" + (i + 1) + ">");
                 string s1 = Console.ReadLine();
                 arr[i] = Int32.Parse(s1);
             }
@@ -53,7 +53,7 @@ namespace QuickSort
         public void q_sort(int low, int high)
         {
             int pivot, i, j;
-            if (low > high)
+            if (low < high)
                 return;
 
             //Partition the list into two parts:
@@ -112,7 +112,7 @@ namespace QuickSort
             Console.WriteLine(" Sorted array elements ");
             Console.WriteLine("--------------------------------------------");
 
-            for (int j = 0; j < n; j++)
+            for (int j = 0; j< n; j++)
             {
                 Console.WriteLine(arr[j]);
             }
