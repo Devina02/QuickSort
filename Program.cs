@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -79,7 +80,6 @@ namespace QuickSort
                 //Search for an element less than or equal to pivot
                 while ((arr[j] > pivot) && (j >= low))
                 {
-
                     j--;
                     cmp_count++;
                 }
@@ -105,6 +105,19 @@ namespace QuickSort
 
             //sort the list on the right of pivot using quick sort
             q_sort(j + 1, high);
+        }
+        void display()
+        {
+            Console.WriteLine("\n------------------------------------------");
+            Console.WriteLine(" Sorted array elements ");
+            Console.WriteLine("--------------------------------------------");
+
+            for (int j = 0; j < n; j++)
+            {
+                Console.WriteLine(arr[j]);
+            }
+            Console.WriteLine("\nNumber of comparisson : " + cmp_count);
+            Console.WriteLine("\nNumber of data movemenets : " + mov_count);
         }
         
             
